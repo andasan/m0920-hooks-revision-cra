@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 class CityWeather extends Component {
-
-
     state = {}
 
     async componentDidMount(){
@@ -26,7 +24,10 @@ class CityWeather extends Component {
         const iconUrl = `http://openweathermap.org/img/w/${this.state.icon}.png`
 
         return(
+            <div className="container">
             <h1>{this.props.cityName}</h1>
+            {/* <div className="temp">{cityData.main.temp} <img src={iconUrl} /></div> */}
+            </div>
         )
     }
 }
